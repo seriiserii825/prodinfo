@@ -1,0 +1,15 @@
+body {
+  text-transform: uppercase;
+  color: green;
+  background: red;
+}
+
+body span {
+  transition: all .4s ease;
+}
+
+body ul {
+  list-style-type: none;
+}
+
+/*# sourceMappingURL=custom.css.map */

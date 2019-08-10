@@ -1,0 +1,1 @@
+{"version":3,"sources":["custom.scss"],"names":[],"mappings":"AAAA;EACE,0BAAyB;EACzB,aAAY;EACZ,gBAAe;CAOhB;;AAVD;EAKI,yBAAwB;CACzB;;AANH;EAQI,sBAAqB;CACtB","file":"custom.css","sourcesContent":["body {\r\n  text-transform: uppercase;\r\n  color: green;\r\n  background: red;\r\n  span {\r\n    transition: all .4s ease;\r\n  }\r\n  ul {\r\n    list-style-type: none;\r\n  }\r\n}"]}
