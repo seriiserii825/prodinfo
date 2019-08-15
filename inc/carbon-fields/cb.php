@@ -9,6 +9,10 @@ add_action('carbon_fields_register_fields', 'crb_attach_theme_options');
 function crb_attach_theme_options()
 {
 	$basic_options_container = Container::make('theme_options', __('Basic Options'))
+		->add_tab(__('Images'), array(
+			Field::make('image', 'crb_logo_png', __('Logo png'))
+			->set_value_type( 'url' ),
+		))
 		->add_tab(__('Contacts'), array(
 			Field::make('text', 'crb_phone', __('Phone'))
 				->set_help_text(esc_html__('Use all simbols for me', 'bs-prodinfo')),
