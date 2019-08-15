@@ -96,9 +96,12 @@ $(function () {
 
 		if (about.length > 0) {
 			let aboutOffsetTop = about.offset().top;
+
 			$('#js-main-menu li a').on('click', function (e) {
 				let href = $(this).attr('href');
-				if (href === 'index.html#js-offers') {
+				console.log(href);
+
+				if (href === 'http://wp-prodinfo.loc/#js-offers') {
 					e.preventDefault();
 					$('html, body').animate({
 						scrollTop: aboutOffsetTop

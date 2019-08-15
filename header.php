@@ -27,35 +27,46 @@
     <div class="main-header-bottom">
         <div class="container">
             <div class="main-header-bottom__wrap">
-                <a class="logo" href="index.html">
-                    <?php
-                        $logo_png = carbon_get_theme_option('crb_logo_png');
-                    ?>
-	                <?php if(!empty($logo_png)): ?>
+                <a class="logo" href="<?php echo home_url(); ?>">
+					<?php
+					$logo_png = carbon_get_theme_option('crb_logo_png');
+					?>
+					<?php if (!empty($logo_png)): ?>
                         <img src="<?php echo $logo_png; ?>" alt="">
-                        <?php else: ?>
+					<?php else: ?>
                         <h4 style="color: red;">Logo from admin</h4>
-	                <?php endif; ?>
+					<?php endif; ?>
                 </a>
-                <ul class="main-menu" id="js-main-menu">
-                    <li class="current-menu-item"><a href="index.html#js-offers">Despre noi</a></li>
-                    <li><a href="advantage.html">Avantajele membrilor</a></li>
-                    <li><a href="our-members.html">Membrii</a></li>
-                    <li><a href="news.html">Stiri</a></li>
-                    <li><a href="contacts.html">Contacte</a></li>
-                    <li><a href="single-news.html">Blog</a></li>
-                </ul>
+
+				<?php
+				wp_nav_menu([
+					'theme_location' => 'menu-header',
+					'menu' => '',
+					'container' => '',
+					'container_class' => '',
+					'container_id' => '',
+					'menu_class' => 'main-menu',
+					'menu_id' => 'js-main-menu',
+					'echo' => true,
+					'fallback_cb' => 'wp_page_menu',
+					'before' => '',
+					'after' => '',
+					'link_before' => '',
+					'link_after' => '',
+					'items_wrap' => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+					'depth' => 0,
+					'walker' => '',
+				]);
+				?>
                 <div class="sandwitch" id="js-sandwitch">
                     <div class="sandwitch__line sandwitch__line--top"></div>
                     <div class="sandwitch__line sandwitch__line--middle"></div>
                     <div class="sandwitch__line sandwitch__line--bottom"></div>
                 </div>
-                <div class="flags-styled"><span class="flag wpglobus-current-language"><img
-                                src="<?php echo get_template_directory_uri(); ?>/site/assets/i/ru.png"></span><span
-                            class="flag"><img
-                                src="<?php echo get_template_directory_uri(); ?>/site/assets/i/us.png"></span><span
-                            class="flag"><img
-                                src="<?php echo get_template_directory_uri(); ?>/site/assets/i/ro.png"></span></div>
+
+                <?php if(!dynamic_sidebar('language')): ?>
+                    <h4 style="color: red;">Место для виджета языков</h4>
+                <?php endif; ?>
             </div>
         </div>
     </div>

@@ -1,4 +1,8 @@
-<?php get_header(); ?>
+<?php
+/**
+ * Template Name: Главная
+ */
+get_header(); ?>
 <div class="main-slider__wrap">
     <div class="main-slider__content">
         <h2>Devino membrul al</h2>
