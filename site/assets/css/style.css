@@ -4710,6 +4710,7 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4985,10 +4986,12 @@ p {
 .offers__content {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[5];
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px; }
   @media screen and (max-width: 960px) {
     .offers__content {
+      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr); } }
   @media screen and (max-width: 420px) {
     .offers__content {
@@ -5030,11 +5033,13 @@ p {
   display: -ms-grid;
   display: grid;
   margin-bottom: 70px;
+  -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   z-index: 3; }
   @media screen and (max-width: 1200px) {
     .member__content {
+      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
       margin: 0 auto 70px;
       max-width: 620px; } }
@@ -5068,14 +5073,17 @@ p {
 .directions__content {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[5];
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 5px;
   margin-bottom: 70px; }
   @media screen and (max-width: 940px) {
     .directions__content {
+      -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr); } }
   @media screen and (max-width: 600px) {
     .directions__content {
+      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr); } }
   @media screen and (max-width: 370px) {
     .directions__content {
@@ -5260,6 +5268,7 @@ p {
 .footer-top {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   margin-bottom: 30px; }
@@ -5296,6 +5305,7 @@ p {
 .footer-form .form-flex {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   margin-bottom: 20px; }
@@ -5478,11 +5488,13 @@ p {
   max-width: 960px;
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   font-size: 16px; }
   @media screen and (max-width: 850px) {
     .our-members-content {
+      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr); } }
   @media screen and (max-width: 600px) {
     .our-members-content {
@@ -5534,6 +5546,7 @@ p {
 .news__item {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   color: #999;
   margin-bottom: 30px; }
@@ -5736,4 +5749,63 @@ p {
       color: white;
       background: blue; }
 
-/*# sourceMappingURL=style.css.map */
+.last-posts {
+  margin: 0 auto 40px;
+  padding: 0 15px;
+  max-width: 970px; }
+
+.last-posts__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px; }
+  .last-posts__header h4,
+  .last-posts__header a {
+    font-size: 16px;
+    font-weight: normal;
+    text-decoration: none;
+    color: #2F3055;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; }
+  .last-posts__header a:hover {
+    color: #13d68f; }
+
+.last-posts-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px; }
+  .last-posts-content h3 {
+    margin-bottom: 25px;
+    font-size: 16px;
+    font-weight: normal; }
+
+.last-posts__text {
+  margin-top: -8px;
+  padding: 25px;
+  border: 1px solid #ccc; }
+
+.register {
+  margin: 0 auto 60px;
+  padding: 50px 15px;
+  max-width: 940px;
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #ccc; }
+  .register a {
+    font-size: inherit;
+    text-decoration: none;
+    color: blue;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s; }
+    .register a:hover {
+      color: #13d68f; }
