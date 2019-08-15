@@ -4710,7 +4710,6 @@ p {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: distribute;
     justify-content: space-around;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -4986,12 +4985,10 @@ p {
 .offers__content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px; }
   @media screen and (max-width: 960px) {
     .offers__content {
-      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr); } }
   @media screen and (max-width: 420px) {
     .offers__content {
@@ -5033,13 +5030,11 @@ p {
   display: -ms-grid;
   display: grid;
   margin-bottom: 70px;
-  -ms-grid-columns: (1fr)[4];
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   z-index: 3; }
   @media screen and (max-width: 1200px) {
     .member__content {
-      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
       margin: 0 auto 70px;
       max-width: 620px; } }
@@ -5073,17 +5068,14 @@ p {
 .directions__content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[5];
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 5px;
   margin-bottom: 70px; }
   @media screen and (max-width: 940px) {
     .directions__content {
-      -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr); } }
   @media screen and (max-width: 600px) {
     .directions__content {
-      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr); } }
   @media screen and (max-width: 370px) {
     .directions__content {
@@ -5268,7 +5260,6 @@ p {
 .footer-top {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   margin-bottom: 30px; }
@@ -5305,7 +5296,6 @@ p {
 .footer-form .form-flex {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   margin-bottom: 20px; }
@@ -5488,13 +5478,11 @@ p {
   max-width: 960px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   font-size: 16px; }
   @media screen and (max-width: 850px) {
     .our-members-content {
-      -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr); } }
   @media screen and (max-width: 600px) {
     .our-members-content {
@@ -5546,7 +5534,6 @@ p {
 .news__item {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
   grid-template-columns: repeat(2, 1fr);
   color: #999;
   margin-bottom: 30px; }
