@@ -1,49 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru_RU">
-<head>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta charset="utf-8">
-<!--    <link rel="stylesheet" type="text/css" href="../../assets/libs/fontawesome-free-5.10.1-web/css/all.min.css">-->
-<!--    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">-->
-<!--    <title>Main</title>-->
-    <?php wp_head(); ?>
-</head>
-<body>
-<div class="hidden">
-    <!--include ../../../build/../../assets/i/svg/inline/sprite.svg-->
-</div>
-<header class="main-header">
-    <div class="main-header-top">
-        <div class="main-header-top__wrap address">
-            <div class="main-header-top__item address__item"><i class="fas fa-phone"></i><a href="tel:+37368365000"> +(373) 68365000</a></div>
-            <div class="main-header-top__item address__item"><i class="fas fa-envelope"></i><a href="mailto:prodinfo.md@gmail.com">prodinfo.md@gmail.com</a></div>
-            <div class="main-header-top__item address__item"><i class="fas fa-map-marker-alt"></i><a href="#"> Chifinau, bd. Mircea cel BatrTn 8/1</a></div>
-        </div>
-    </div>
-    <div class="main-header-bottom">
-        <div class="container">
-            <div class="main-header-bottom__wrap"><a class="logo" href="index.html">
-                    <picture>
-                        <source type="image/webp" srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/logo.webp"><img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/logo.png" alt="">
-                    </picture></a>
-                <ul class="main-menu" id="js-main-menu">
-                    <li class="current-menu-item"><a href="index.html#js-offers">Despre noi</a></li>
-                    <li><a href="advantage.html">Avantajele membrilor</a></li>
-                    <li><a href="our-members.html">Membrii</a></li>
-                    <li><a href="news.html">Stiri</a></li>
-                    <li><a href="contacts.html">Contacte</a></li>
-                    <li><a href="single-news.html">Blog</a></li>
-                </ul>
-                <div class="sandwitch" id="js-sandwitch">
-                    <div class="sandwitch__line sandwitch__line--top"></div>
-                    <div class="sandwitch__line sandwitch__line--middle"></div>
-                    <div class="sandwitch__line sandwitch__line--bottom"></div>
-                </div>
-                <div class="flags-styled"><span class="flag wpglobus-current-language"><img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/ru.png"></span><span class="flag"><img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/us.png"></span><span class="flag"><img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/ro.png"></span></div>
-            </div>
-        </div>
-    </div>
-</header>
+<?php get_header(); ?>
 <div class="main-slider__wrap">
     <div class="main-slider__content">
         <h2>Devino membrul al</h2>
@@ -251,46 +206,4 @@
         </div>
     </div>
 </div>
-<footer class="footer" style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/footer-bg.jpg')">
-    <div class="container">
-        <div class="footer-top">
-            <div class="footer-contacts">
-                <h2>Contacte</h2>
-                <ul class="footer-list address">
-                    <li class="address__item"><i class="fas fa-phone"></i><a href="tel:+37368365000"> +(373) 68365000</a></li>
-                    <li class="address__item"><i class="fas fa-envelope"></i><a href="mailto:prodinfo.md@gmail.com">prodinfo.md@gmail.com</a></li>
-                    <li class="address__item"><i class="fas fa-map-marker-alt"></i><a href="#"> Chifinau, bd. Mircea cel BatrTn 8/1</a></li>
-                </ul>
-            </div>
-            <div class="footer-form">
-                <div class="form-flex">
-                    <div class="form-half">
-                        <input type="text" name="field-name" required="required" placeholder="Numele/Prenumele*">
-                    </div>
-                    <div class="form-half">
-                        <input type="text" name="field-email" required="required" placeholder="Email*">
-                    </div>
-                </div>
-                <div class="form-full">
-                    <textarea>Mesajul Dvs.</textarea>
-                </div>
-                <input class="btn" type="submit" value="Trimite">
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="map"><img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/map.jpg"></div>
-        </div>
-    </div>
-</footer><!--[if lt IE 9]>
-<script src="assets/libs/html5shiv/es5-shim.min.js"></script>
-<script src="assets/libs/html5shiv/html5shiv.min.js"></script>
-<script src="assets/libs/html5shiv/html5shiv-printshiv.min.js"></script>
-<script src="assets/libs/html5shiv/respond.min.js"></script>
-<!--<![endif]-->
-<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
-<!--<script src="<?php echo get_template_directory_uri(); ?>/site/assets/libs/jquery-easy-scroll/jquery.easeScroll.js"></script>-->
-<!--<script src="<?php echo get_template_directory_uri(); ?>/site/assets/libs/slick/slick/slick.min.js"></script>-->
-<!--<script src="<?php echo get_template_directory_uri(); ?>/site/assets/js/main.js"></script>-->
-<?php wp_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>

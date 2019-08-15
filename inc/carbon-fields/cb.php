@@ -12,6 +12,10 @@ function crb_attach_theme_options()
 		->add_tab(__('Contacts'), array(
 			Field::make('text', 'crb_phone', __('Phone'))
 				->set_help_text(esc_html__('Use all simbols for me', 'bs-prodinfo')),
+			Field::make('text', 'crb_mail', __('Email')),
+			Field::make('text', 'crb_address_ru', __('Address ru')),
+			Field::make('text', 'crb_address_ro', __('Address ro')),
+			Field::make('text', 'crb_address_en', __('Address en')),
 		));
 
 	// Add second options page under 'Basic Options'
