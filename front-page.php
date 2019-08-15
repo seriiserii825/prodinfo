@@ -18,7 +18,7 @@ get_header(); ?>
 <div class="main-slider__wrap">
     <div class="main-slider__content">
         <h2><?php echo carbon_get_theme_option('crb_slider_title' . get_lang()); ?></h2>
-        <h4><?php echo carbon_get_theme_option('crb_slider_subtitle' . get_lang()); ?></h4>
+        <h4><?php echo carbon_get_theme_option('crb_site_title'); ?></h4>
         <p><?php echo carbon_get_theme_option('crb_slider_text' . get_lang()); ?></p>
     </div>
     <div class="main-slider-arrows">
@@ -46,7 +46,7 @@ get_header(); ?>
 <section class="section offers" id="js-offers">
     <header class="section__header">
         <h2 class="section__title"><?php echo carbon_get_theme_option('crb_offers_title' . get_lang()); ?></h2>
-        <h4 class="section__subtitle"><?php echo carbon_get_theme_option('crb_offers_subtitle' . get_lang()); ?></h4>
+        <h4 class="section__subtitle"><?php echo carbon_get_theme_option('crb_site_title'); ?></h4>
         <p class="section__text"><?php echo carbon_get_theme_option('crb_offers_text' . get_lang()); ?></p>
     </header>
     <div class="container">
@@ -54,11 +54,11 @@ get_header(); ?>
 			<?php $offers = carbon_get_theme_option('crb_offers'); ?>
 			<?php foreach ($offers as $offer): ?>
                 <div class="offers__item">
-					<img src="<?php echo kama_thumb_src('w=100 &h=100', $offer['crb_offers_photo']); ?>" alt="">
+                    <img src="<?php echo kama_thumb_src('w=100 &h=100', $offer['crb_offers_photo']); ?>" alt="">
 
                     <div class="offers__text">
-                        <h3><?php echo $offer['crb_offers_item_title'.get_lang()]; ?></h3>
-                        <p><?php echo $offer['crb_offers_item_text'.get_lang()]; ?></p>
+                        <h3><?php echo $offer['crb_offers_item_title' . get_lang()]; ?></h3>
+                        <p><?php echo $offer['crb_offers_item_text' . get_lang()]; ?></p>
                     </div>
                 </div>
 			<?php endforeach; ?>
@@ -68,141 +68,74 @@ get_header(); ?>
 <section class="section member dark"
          style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/members/members_bg.jpg')">
     <header class="section__header">
-        <h2 class="section__title"><?php echo carbon_get_theme_option('crb_members_title'.get_lang()); ?></h2>
-        <h4 class="section__subtitle"><?php echo carbon_get_theme_option('crb_members_text'.get_lang()); ?></h4>
+        <h2 class="section__title"><?php echo carbon_get_theme_option('crb_members_title' . get_lang()); ?></h2>
+        <h4 class="section__subtitle"><?php echo carbon_get_theme_option('crb_site_title'); ?></h4>
     </header>
     <div class="container">
         <div class="member__content">
-            <?php $members = carbon_get_theme_option('crb_members'); ?>
-            <?php foreach($members as $member): ?>
+			<?php $members = carbon_get_theme_option('crb_members'); ?>
+			<?php foreach ($members as $member): ?>
                 <div class="member__item">
                     <img src="<?php echo kama_thumb_src('w=120 &h=100', $member['crb_members_photo']); ?>" alt="">
-                    <p class="member__text"><?php echo $member['crb_offers_item_title'.get_lang()]; ?></p>
+                    <p class="member__text"><?php echo $member['crb_offers_item_title' . get_lang()]; ?></p>
                 </div>
-            <?php endforeach; ?>
+			<?php endforeach; ?>
         </div>
-        <a class="btn arrow" href="#"><?php echo carbon_get_theme_option('crb_members_button'.get_lang()); ?> →</a>
+        <a class="btn arrow" href="#"><?php echo carbon_get_theme_option('crb_members_button' . get_lang()); ?> →</a>
     </div>
 </section>
 
 <section class="section directions">
     <header class="section__header">
-        <h2 class="section__title">Directiile de afaceri admise in cadru</h2>
-        <h4 class="section__subtitle">A.O. Centrul de Informare și Documentare a Producătorilor</h4>
+        <h2 class="section__title"><?php echo carbon_get_theme_option('crb_directions_title' . get_lang()); ?></h2>
+        <h4 class="section__subtitle"><?php echo carbon_get_theme_option('crb_site_title'); ?></h4>
     </header>
     <div class="container">
         <div class="directions__content">
-            <div class="directions__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/1.jpg')">
-                <div class="directions__center">
-                    <h4>Agricultura</h4>
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/1.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/1.png" alt="">
-                    </picture>
+			<?php $directions = carbon_get_theme_option('crb_directions'); ?>
+			<?php foreach ($directions as $direction): ?>
+                <div class="directions__item"
+                     style="background-image: url('<?php echo kama_thumb_src('w=241 &h=262', $direction['crb_directions_bg']) ?>')">
+                    <div class="directions__center">
+                        <h4><?php echo $direction['crb_directions_item_title' . get_lang()]; ?></h4>
+                        <img src="<?php echo kama_thumb_src('w=92 &h=92', $direction['crb_directions_photo']) ?>"
+                             alt="">
+                    </div>
                 </div>
-            </div>
-            <div class="directions__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/2.jpg')">
-                <div class="directions__center">
-                    <h4>Zootehnie</h4>
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/2.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/2.png" alt="">
-                    </picture>
-                </div>
-            </div>
-            <div class="directions__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/3.jpg')">
-                <div class="directions__center">
-                    <h4>Producere</h4>
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/3.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/3.png" alt="">
-                    </picture>
-                </div>
-            </div>
-            <div class="directions__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/4.jpg')">
-                <div class="directions__center">
-                    <h4>Prestari servicii</h4>
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/4.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/4.png" alt="">
-                    </picture>
-                </div>
-            </div>
-            <div class="directions__item"
-                 style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/5.jpg')">
-                <div class="directions__center">
-                    <h4>Turism</h4>
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/5.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/directions/5.png" alt="">
-                    </picture>
-                </div>
-            </div>
+			<?php endforeach; ?>
         </div>
-        <a class="btn arrow" href="#">Domenii de activitate admise →</a>
+        <a class="btn arrow" href="#"><?php echo carbon_get_theme_option('crb_directions_button' . get_lang()); ?> →</a>
     </div>
 </section>
 <div class="idea">
     <div class="idea-slider" id="js-idea-slider">
-        <div class="idea-slider__item"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/idea/1.jpg')"></div>
-        <div class="idea-slider__item"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/idea/2.jpg')"></div>
-        <div class="idea-slider__item"
-             style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/idea/3.jpg')"></div>
+		<?php $idea_images = carbon_get_theme_option('crb_idea'); ?>
+		<?php foreach ($idea_images as $img): ?>
+            <div class="idea-slider__item"
+                 style="background-image: url('<?php echo kama_thumb_src('w=1349 &h=248', $img['crb_idea_photo']) ?>')"></div>
+		<?php endforeach; ?>
     </div>
     <div class="idea__content">
-        <h2>Idei de afaceri la cheie</h2>
-        <p>Cele mai profitabile și accesibile idei pentru afacerea Dvs. 65% Finanțare nerambursabilă | Venit de la
-            50.000€/an</p><a class="btn large" href="#">Detalii</a>
+        <h2><?php echo carbon_get_theme_option('crb_idea_title'.get_lang()); ?></h2>
+        <p><?php echo carbon_get_theme_option('crb_idea_subtitle'.get_lang()); ?></p>
+        <a class="btn large" href="#"><?php echo carbon_get_theme_option('crb_idea_button'.get_lang()); ?></a>
     </div>
 </div>
 <div class="partners">
     <div class="container">
-        <h2>Partenerii nostrii:</h2>
+        <h2><?php echo carbon_get_theme_option('crb_partners_title'); ?></h2>
         <div class="partners-slider-wrap">
             <div class="slider-arrow slider-arrow--left"><img
                         src="<?php echo get_template_directory_uri(); ?>/site/assets/i/svg/left-arrow.svg"></div>
             <div class="slider-arrow slider-arrow--right"><img
                         src="<?php echo get_template_directory_uri(); ?>/site/assets/i/svg/right-arrow.svg"></div>
             <div class="partners-slider" id="js-partners-slider">
+                <?php $partners = carbon_get_theme_option('crb_partners'); ?>
+                <?php foreach($partners as $partner): ?>
                 <div class="partners-slider__item">
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/1.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/1.jgp" alt="">
-                    </picture>
+					<img src="<?php echo kama_thumb_src('w=213', $partner['crb_partners_photo']); ?>" alt="">
                 </div>
-                <div class="partners-slider__item">
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/2.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/2.jgp" alt="">
-                    </picture>
-                </div>
-                <div class="partners-slider__item">
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/3.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/3.jgp" alt="">
-                    </picture>
-                </div>
-                <div class="partners-slider__item">
-                    <picture>
-                        <source type="image/webp"
-                                srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/1.webp">
-                        <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/partners/1.jgp" alt="">
-                    </picture>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </div>
