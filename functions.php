@@ -7,6 +7,9 @@
  * @package bs-prodinfo
  */
 
+if (!defined('ABSPATH')) exit;
+
+require_once __DIR__.'/inc/carbon-fields/cb.php';
 require_once __DIR__.'/inc/bs-styles.php';
 require_once __DIR__.'/inc/bs-setup.php';
 require_once __DIR__.'/inc/bs-widgets.php';
