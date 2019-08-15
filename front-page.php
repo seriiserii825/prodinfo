@@ -68,49 +68,23 @@ get_header(); ?>
 <section class="section member dark"
          style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/members/members_bg.jpg')">
     <header class="section__header">
-        <h2 class="section__title">Cine poate deveni membrul al</h2>
-        <h4 class="section__subtitle">A.O. Centrul de Informare și Documentare a Producătorilor?</h4>
+        <h2 class="section__title"><?php echo carbon_get_theme_option('crb_members_title'.get_lang()); ?></h2>
+        <h4 class="section__subtitle"><?php echo carbon_get_theme_option('crb_members_text'.get_lang()); ?></h4>
     </header>
     <div class="container">
         <div class="member__content">
-            <div class="member__item">
-                <picture>
-                    <source type="image/webp"
-                            srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/1.webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/1.png" alt="">
-                </picture>
-                <p class="member__text">Tineri cu vârsta de la 18 pâna la 35 ani care vor să inițieze sau să dezvolte o
-                    afacere</p>
-            </div>
-            <div class="member__item">
-                <picture>
-                    <source type="image/webp"
-                            srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/2.webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/2.png" alt="">
-                </picture>
-                <p class="member__text">Orice persoană care își dorește o afacere de succes</p>
-            </div>
-            <div class="member__item">
-                <picture>
-                    <source type="image/webp"
-                            srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/3.webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/3.png" alt="">
-                </picture>
-                <p class="member__text">Femei care doresc să inițieze sau să dezvolte o afacere</p>
-            </div>
-            <div class="member__item">
-                <picture>
-                    <source type="image/webp"
-                            srcset="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/4.webp">
-                    <img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/members/4.png" alt="">
-                </picture>
-                <p class="member__text">Orice producător sau prestator de servicii care are înregistrată o formă
-                    organizatorico-juridică</p>
-            </div>
+            <?php $members = carbon_get_theme_option('crb_members'); ?>
+            <?php foreach($members as $member): ?>
+                <div class="member__item">
+                    <img src="<?php echo kama_thumb_src('w=120 &h=100', $member['crb_members_photo']); ?>" alt="">
+                    <p class="member__text"><?php echo $member['crb_offers_item_title'.get_lang()]; ?></p>
+                </div>
+            <?php endforeach; ?>
         </div>
-        <a class="btn arrow" href="#">Avantajele membrilor →</a>
+        <a class="btn arrow" href="#"><?php echo carbon_get_theme_option('crb_members_button'.get_lang()); ?> →</a>
     </div>
 </section>
+
 <section class="section directions">
     <header class="section__header">
         <h2 class="section__title">Directiile de afaceri admise in cadru</h2>

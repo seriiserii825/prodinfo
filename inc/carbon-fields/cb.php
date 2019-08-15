@@ -47,11 +47,11 @@ function crb_attach_theme_options()
 		))
 		->add_tab(__('Offers'), array(
 			Field::make('text', 'crb_offers_title_ro', __('Block offers title ro', 'bs-prodinfo'))
-			->set_width(30),
+				->set_width(30),
 			Field::make('text', 'crb_offers_subtitle_ro', __('Block offers subtitle ro', 'bs-prodinfo'))
-			->set_width(30),
+				->set_width(30),
 			Field::make('text', 'crb_offers_text_ro', __('Block offers text ro', 'bs-prodinfo'))
-			->set_width(30),
+				->set_width(30),
 
 			Field::make('text', 'crb_offers_title_ru', __('Block offers title ru', 'bs-prodinfo'))
 				->set_width(30),
@@ -70,7 +70,7 @@ function crb_attach_theme_options()
 			Field::make('complex', 'crb_offers', __('Slider'))
 				->add_fields(array(
 					Field::make('image', 'crb_offers_photo', __('Photo offers'))
-					->set_help_text('120x120'),
+						->set_help_text('120x120'),
 
 					Field::make('text', 'crb_offers_item_title_ro', __('Block offers item title ro', 'bs-prodinfo'))
 						->set_width(40),
@@ -78,14 +78,51 @@ function crb_attach_theme_options()
 						->set_width(60),
 
 					Field::make('text', 'crb_offers_item_title_ru', __('Block offers item title ru', 'bs-prodinfo'))
-					->set_width(40),
+						->set_width(40),
 					Field::make('text', 'crb_offers_item_text_ru', __('Block offers item text ru', 'bs-prodinfo'))
-					->set_width(60),
+						->set_width(60),
 
 					Field::make('text', 'crb_offers_item_title_en', __('Block offers item title en', 'bs-prodinfo'))
 						->set_width(40),
 					Field::make('text', 'crb_offers_item_text_en', __('Block offers item text en', 'bs-prodinfo'))
 						->set_width(60),
+
+				))
+				->set_layout('tabbed-horizontal')
+		))
+		->add_tab(__('Members'), array(
+			Field::make('text', 'crb_members_title_ro', __('Block members title ro', 'bs-prodinfo'))
+				->set_width(50),
+			Field::make('text', 'crb_members_text_ro', __('Block members text ro', 'bs-prodinfo'))
+				->set_width(50),
+
+			Field::make('text', 'crb_members_title_ru', __('Block members title ru', 'bs-prodinfo'))
+				->set_width(50),
+			Field::make('text', 'crb_members_text_ru', __('Block members text ru', 'bs-prodinfo'))
+				->set_width(50),
+
+			Field::make('text', 'crb_members_title_en', __('Block members title en', 'bs-prodinfo'))
+				->set_width(50),
+			Field::make('text', 'crb_members_text_en', __('Block members text en', 'bs-prodinfo'))
+				->set_width(50),
+
+			Field::make('text', 'crb_members_button_ro', __('Block members button ro', 'bs-prodinfo'))
+				->set_width(30),
+			Field::make('text', 'crb_members_button_ru', __('Block members button ru', 'bs-prodinfo'))
+				->set_width(30),
+			Field::make('text', 'crb_members_button_en', __('Block members button en', 'bs-prodinfo'))
+				->set_width(30),
+
+			Field::make('complex', 'crb_members', __('Slider'))
+				->add_fields(array(
+					Field::make('image', 'crb_members_photo', __('Photo offers'))
+						->set_help_text('116x100'),
+
+					Field::make('text', 'crb_offers_item_title_ro', __('Block offers item title ro', 'bs-prodinfo')),
+
+					Field::make('text', 'crb_offers_item_title_ru', __('Block offers item title ru', 'bs-prodinfo')),
+
+					Field::make('text', 'crb_offers_item_title_en', __('Block offers item title en', 'bs-prodinfo')),
 
 				))
 				->set_layout('tabbed-horizontal')
