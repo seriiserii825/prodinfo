@@ -3,10 +3,17 @@
         <div class="footer-top">
             <div class="footer-contacts">
                 <h2>Contacte</h2>
+
+	            <?php
+					$phone = carbon_get_theme_option('crb_phone');
+					$phoneClear = clear_phone($phone);
+					$mail = carbon_get_theme_option('crb_mail');
+					$address = carbon_get_theme_option('crb_address' . get_lang());
+	            ?>
                 <ul class="footer-list address">
-                    <li class="address__item"><i class="fas fa-phone"></i><a href="tel:+37368365000"> +(373) 68365000</a></li>
-                    <li class="address__item"><i class="fas fa-envelope"></i><a href="mailto:prodinfo.md@gmail.com">prodinfo.md@gmail.com</a></li>
-                    <li class="address__item"><i class="fas fa-map-marker-alt"></i><a href="#"> Chifinau, bd. Mircea cel BatrTn 8/1</a></li>
+                    <li class="address__item"><i class="fas fa-phone"></i><a href="tel:<?php echo $phoneClear; ?>"> <?php echo $phone; ?></a></li>
+                    <li class="address__item"><i class="fas fa-envelope"></i><a href="mailto:<?php echo $mail; ?>"><?php echo $mail; ?></a></li>
+                    <li class="address__item"><i class="fas fa-map-marker-alt"></i><a href="#"><?php echo $address; ?></a></li>
                 </ul>
             </div>
             <div class="footer-form">
