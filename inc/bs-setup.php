@@ -10,9 +10,9 @@ if ( ! function_exists( 'bs_prodinfo_setup' ) ) :
 
 		add_theme_support( 'post-thumbnails' );
 
-// This theme uses wp_nav_menu() in one location.
+		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'bs-prodinfo' ),
+			'menu-header' => esc_html__( 'Header menu', 'bs-prodinfo' ),
 		) );
 
 		add_theme_support( 'html5', array(
