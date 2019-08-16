@@ -1362,7 +1362,9 @@ p {
 .news__item-text {
   margin-bottom: 30px;
 
-  h2 {
+
+  h1,
+  h2{
     margin-bottom: 20px;
     font-size: 26px;
     font-weight: normal;
@@ -1381,6 +1383,9 @@ p {
     }
   }
 
+  h1 {
+    font-size: 28px;
+  }
   p {
     height: 56px;
     font-size: 14px;

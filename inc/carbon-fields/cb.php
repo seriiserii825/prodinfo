@@ -18,9 +18,16 @@ function crb_attach_theme_options()
 			Field::make('text', 'crb_phone', __('Phone'))
 				->set_help_text(esc_html__('Use all simbols for me', 'bs-prodinfo')),
 			Field::make('text', 'crb_mail', __('Email')),
-			Field::make('text', 'crb_address_ru', __('Address ru')),
-			Field::make('text', 'crb_address_ro', __('Address ro')),
-			Field::make('text', 'crb_address_en', __('Address en')),
+			Field::make('text', 'crb_address_ru', __('Address ru'))
+			->set_width(30),
+			Field::make('text', 'crb_address_ro', __('Address ro'))
+			->set_width(30),
+			Field::make('text', 'crb_address_en', __('Address en'))
+			->set_width(30),
+
+			Field::make('text', 'crb_facebook', __('Facebook')),
+			Field::make('text', 'crb_twitter', __('Twitter')),
+			Field::make('text', 'crb_linkedin', __('Linked in')),
 		));
 
 	// Add second options page under 'Basic Options'
