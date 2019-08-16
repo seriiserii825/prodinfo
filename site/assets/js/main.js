@@ -82,7 +82,7 @@ $(function () {
 			$('#js-main-menu li a').on('click', function (e) {
 				let href = $(this).attr('href');
 
-				if (href === 'http://prodinfo.myihor.ru/#js-offers') {
+				if (href === 'http://prodinfo.myihor.ru/#js-offers' || href === 'http://prodinfo.myihor.ru/en/#js-offers' || href === 'http://prodinfo.myihor.ru/ru/#js-offers') {
 					e.preventDefault();
 					$('html, body').animate({
 						scrollTop: aboutOffsetTop

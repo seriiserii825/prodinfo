@@ -32,7 +32,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="map"><img src="<?php echo get_template_directory_uri(); ?>/site/assets/i/map.jpg"></div>
+            <div class="map">
+                <?php if(!dynamic_sidebar('map')): ?>
+                    <h4 style="color: red;">Место для карты из виджетов</h4>
+                <?php endif; ?>
+            </div>
         </div>
     </div>
 </footer>
