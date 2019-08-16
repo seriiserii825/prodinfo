@@ -187,6 +187,29 @@ function crb_attach_theme_options()
 
 				))
 				->set_layout('tabbed-horizontal')
+		))
+		->add_tab(__('Benefice'), array(
+			Field::make('text', 'crb_benefce_title_before_ro', __('Title benefce before ro'))
+				->set_width(50),
+			Field::make('text', 'crb_benefce_title_after_ro', __('Title benefce after ro'))
+				->set_width(50),
+
+			Field::make('text', 'crb_benefce_title_before_ru', __('Title benefce before ru'))
+				->set_width(50),
+			Field::make('text', 'crb_benefce_title_after_ru', __('Title benefce after ru'))
+				->set_width(50),
+
+			Field::make('text', 'crb_benefce_title_before_en', __('Title benefce before en'))
+				->set_width(50),
+			Field::make('text', 'crb_benefce_title_after_en', __('Title benefce after en'))
+				->set_width(50),
+
+			Field::make('text', 'crb_benefce_button_ro', __('Title benefce button ro'))
+				->set_width(30),
+			Field::make('text', 'crb_benefce_button_ru', __('Title benefce button ru'))
+				->set_width(30),
+			Field::make('text', 'crb_benefce_button_en', __('Title benefce button en'))
+				->set_width(30),
 		));
 }
 

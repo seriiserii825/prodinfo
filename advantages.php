@@ -2,12 +2,20 @@
 /**
  * Template Name: Преимущества
  */
-get_header(); ?>
+get_header();
 
-<section class="page-intro" style="background-image: url('../../assets/i/advantages/advantages_bg.jpg')">
-	<h1 class="section__title">Care sun avantajele membrilor?</h1>
+$post_id = 14;
+$title_before = carbon_get_theme_option('crb_benefce_title_before'.get_lang());
+$site_title = carbon_get_post_meta($post_id, 'crb_advantages_title'.get_lang());
+$title_after = carbon_get_theme_option('crb_benefce_title_after'.get_lang());
+
+?>
+
+
+<section class="page-intro" style="background-image: url('<?php echo carbon_get_post_meta($post_id, 'crb_advantage_bg'); ?>')">
+	<h1 class="section__title"><?php echo $site_title; ?></h1>
 </section>
-<section class="advantage__description">Fii Membru al <span class="accent">AO Centrul de Informare și Documentare a Producătorilor</span> și beneficiază de AVANTAJE</section>
+<section class="advantage__description"><?php echo $title_before; ?> <span class="accent"><?php echo carbon_get_theme_option('crb_site_title'); ?></span> <?php echo $title_after; ?></section>
 <div class="advantage-content">
     <?php
         $advantages = new WP_Query([
@@ -46,7 +54,8 @@ get_header(); ?>
 </div>
 <section class="benefice">
 	<div class="benefice__content">
-		<p>Fii Membru al <span class="accent"> AO Centrul de Informare și Documentare a Producătorilor </span> și beneficiază de AVANTAJE</p><a class="btn" href="#">Beneficiaza de avantaje</a>
+		<p><?php echo $title_before; ?> <span class="accent"> <?php echo $site_title; ?> </span> <?php echo $title_after; ?></p>
+        <a class="btn" href="#"><?php echo carbon_get_theme_option('crb_benefce_button'.get_lang()); ?></a>
 	</div>
 </section>
 <?php get_footer(); ?>
