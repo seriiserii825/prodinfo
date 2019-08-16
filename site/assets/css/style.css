@@ -5525,8 +5525,8 @@ p {
   flex-direction: column;
   margin-bottom: 30px;
   height: 100px; }
-  .our-members__img picture {
-    margin-top: auto; }
+  .our-members__img img {
+    height: 80px; }
 
 .news-content {
   padding: 26px 15px;

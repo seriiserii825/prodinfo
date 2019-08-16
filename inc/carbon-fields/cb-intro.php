@@ -11,15 +11,16 @@ function crb_technologies_post_options()
 	Container::make('post_meta', __('Short text'))
 		->set_context( 'carbon_fields_after_title' )
 		->where('post_id', '=', 14)
+		->or_where('post_id', '=', 19)
 		->add_fields(array(
-			Field::make('text', 'crb_advantages_title_ro', __('Title advantages ro'))
+			Field::make('text', 'crb_intro_title_ro', __('Title intro ro'))
 			->set_width(30),
-			Field::make('text', 'crb_advantages_title_ru', __('Title advantages ru'))
+			Field::make('text', 'crb_intro_title_ru', __('Title intro ru'))
 				->set_width(30),
-			Field::make('text', 'crb_advantages_title_en', __('Title advantages en'))
+			Field::make('text', 'crb_intro_title_en', __('Title intro en'))
 			->set_width(30),
 
-			Field::make('image', 'crb_advantage_bg', __('Photo idea'))
+			Field::make('image', 'crb_intro_bg', __('Photo idea'))
 				->set_help_text('1349x625')
 				->set_value_type( 'url' )
 		));

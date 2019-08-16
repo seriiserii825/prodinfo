@@ -6,16 +6,18 @@ get_header();
 
 $post_id = 14;
 $title_before = carbon_get_theme_option('crb_benefce_title_before'.get_lang());
-$site_title = carbon_get_post_meta($post_id, 'crb_advantages_title'.get_lang());
 $title_after = carbon_get_theme_option('crb_benefce_title_after'.get_lang());
+$site_title = carbon_get_theme_option('crb_site_title');
+$intro_title = carbon_get_post_meta($post_id, 'crb_intro_title'.get_lang());
+$intro_bg = carbon_get_post_meta($post_id, 'crb_intro_bg');
 
 ?>
 
 
-<section class="page-intro" style="background-image: url('<?php echo carbon_get_post_meta($post_id, 'crb_advantage_bg'); ?>')">
-	<h1 class="section__title"><?php echo $site_title; ?></h1>
+<section class="page-intro" style="background-image: url('<?php echo $intro_bg; ?>')">
+	<h1 class="section__title"><?php echo $intro_title; ?></h1>
 </section>
-<section class="advantage__description"><?php echo $title_before; ?> <span class="accent"><?php echo carbon_get_theme_option('crb_site_title'); ?></span> <?php echo $title_after; ?></section>
+<section class="advantage__description"><?php echo $title_before; ?> <span class="accent"><?php echo $site_title; ?></span> <?php echo $title_after; ?></section>
 <div class="advantage-content">
     <?php
         $advantages = new WP_Query([
@@ -48,14 +50,10 @@ $title_after = carbon_get_theme_option('crb_benefce_title_after'.get_lang());
             </section>
 
         <?php $i++; endwhile; ?>
+        <?php wp_reset_postdata(); ?>
         <?php else: ?>
     <?php endif; ?>
 
 </div>
-<section class="benefice">
-	<div class="benefice__content">
-		<p><?php echo $title_before; ?> <span class="accent"> <?php echo $site_title; ?> </span> <?php echo $title_after; ?></p>
-        <a class="btn" href="#"><?php echo carbon_get_theme_option('crb_benefce_button'.get_lang()); ?></a>
-	</div>
-</section>
+<?php require __DIR__.'/template-parts/benefice.php'; ?>
 <?php get_footer(); ?>
