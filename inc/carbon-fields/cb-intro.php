@@ -12,6 +12,7 @@ function crb_technologies_post_options()
 		->set_context('carbon_fields_after_title')
 		->where('post_id', '=', 14)
 		->or_where('post_id', '=', 19)
+		->or_where('post_id', '=', 25)
 		->add_fields(array(
 			Field::make('text', 'crb_intro_title_ro', __('Title intro ro'))
 				->set_width(30),
