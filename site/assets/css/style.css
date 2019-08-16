@@ -5625,7 +5625,7 @@ p {
     margin-bottom: 20px;
     font-size: 26px;
     font-weight: normal;
-    height: 92px;
+    height: 86px;
     line-height: 1.1;
     color: #2F3055;
     overflow: hidden; }
@@ -5635,7 +5635,7 @@ p {
       .news__item-text h2 a:hover {
         color: blue; }
   .news__item-text p {
-    height: 50px;
+    height: 56px;
     font-size: 14px;
     overflow: hidden; }
     @media screen and (max-width: 480px) {
