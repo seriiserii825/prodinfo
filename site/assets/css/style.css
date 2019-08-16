@@ -5621,6 +5621,7 @@ p {
 
 .news__item-text {
   margin-bottom: 30px; }
+  .news__item-text h1,
   .news__item-text h2 {
     margin-bottom: 20px;
     font-size: 26px;
@@ -5629,11 +5630,15 @@ p {
     line-height: 1.1;
     color: #2F3055;
     overflow: hidden; }
+    .news__item-text h1 a,
     .news__item-text h2 a {
       text-decoration: none;
       color: inherit; }
+      .news__item-text h1 a:hover,
       .news__item-text h2 a:hover {
         color: blue; }
+  .news__item-text h1 {
+    font-size: 28px; }
   .news__item-text p {
     height: 56px;
     font-size: 14px;
