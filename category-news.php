@@ -14,6 +14,10 @@ $intro_bg = carbon_get_term_meta($category->term_id, 'crb_intro_bg');
     <?php if(have_posts()): ?>
         <?php while(have_posts()): ?>
             <?php the_post(); ?>
+            <?php
+                $time_to_read = carbon_get_the_post_meta('crb_news_time');
+            ?>
+
             <div class="news__item">
                 <div class="news__img" style="background-image: url('<?php the_post_thumbnail_url('full'); ?>')"></div>
                 <div class="news__block">
@@ -21,7 +25,9 @@ $intro_bg = carbon_get_term_meta($category->term_id, 'crb_intro_bg');
                         <div class="news__item-data">
                             <h6 class="news__item-title">Prodinfo ONG</h6>
                             <img class="news__crown" src="<?php echo get_template_directory_uri()?>/site/assets/i/icons/crown.svg" alt="" title="admin">
-                            <div class="news__item-time"><span class="news__item-date"><?php echo get_the_date('d M Y'); ?></span>  <span>2 min</span></div>
+                            <div class="news__item-time">
+                                <span class="news__item-date"><?php echo get_the_date('d M Y'); ?></span>  <span><?php echo $time_to_read . 'min'; ?></span>
+                            </div>
                         </div>
                     </header>
                     <div class="news__item-text">
