@@ -55,6 +55,21 @@ function my_revisions_to_keep($revisions)
 
 add_filter('wp_revisions_to_keep', 'my_revisions_to_keep');
 
+//like
+
+//if(function_exists('wp_ulike')){
+//	wp_ulike('get');
+//}
+
+add_filter('wp_ulike_format_number','wp_ulike_new_format_number',10,3);
+function wp_ulike_new_format_number($value, $num, $plus){
+	if ($num >= 1000 && get_option('wp_ulike_format_number') == '1'):
+		$value = round($num/1000, 2) . 'K';
+	else:
+		$value = $num;
+	endif;
+	return $value;
+}
 
 //function webp_upload_mimes( $existing_mimes ) {
 //	// add webp to the list of mime types
