@@ -2,7 +2,7 @@
 function bs_prodinfo_scripts() {
 	wp_enqueue_style( 'bs-prodinfo-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'bs-prodinfo-fontawesome', get_template_directory_uri().'/site/assets/libs/fontawesome-free-5.10.1-web/css/all.min.css');
-	wp_enqueue_style( 'bs-prodinfo-custom-style', get_template_directory_uri().'/site/assets/css/style.css');
+	wp_enqueue_style( 'bs-prodinfo-my-style', get_template_directory_uri().'/site/assets/wp-gulp/css/my.css');
 
 	wp_deregister_script( 'jquery' );
 	wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js');
