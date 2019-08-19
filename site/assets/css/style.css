@@ -6489,12 +6489,13 @@ p {
 .main-slider__wrap {
   position: relative;
   margin: 0 auto;
-  max-width: 1350px;
+  max-width: 1920px;
 }
 
 .main-slider__item {
   position: relative;
   height: 600px;
+  background-size: cover;
 }
 
 @media screen and (max-width: 630px) {
