@@ -4709,6 +4709,12 @@ p {
   transition: all linear 0.1s;
   background-color: black; }
 
+.main-header-top__wrapper {
+  padding-top: 2px;
+  padding-bottom: 6px;
+  outline: 1px solid green;
+
+}
 .main-header-top {
   padding: 10px 0;
   font-size: 15px;

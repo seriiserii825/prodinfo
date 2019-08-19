@@ -8,20 +8,22 @@
 <body>
 
 <header class="main-header">
-    <div class="main-header-top">
-        <div class="main-header-top__wrap address">
-			<?php
-			$phone = carbon_get_theme_option('crb_phone');
-			$phoneClear = clear_phone($phone);
-			$mail = carbon_get_theme_option('crb_mail');
-			$address = carbon_get_theme_option('crb_address' . get_lang());
-			?>
-            <div class="main-header-top__item address__item"><i class="fas fa-phone"></i><a
-                        href="tel:<?php echo $phoneClear; ?>"> <?php echo $phone; ?></a></div>
-            <div class="main-header-top__item address__item"><i class="fas fa-envelope"></i><a
-                        href="mailto:<?php echo $mail; ?>"> <?php echo $mail; ?></a></div>
-            <div class="main-header-top__item address__item"><i class="fas fa-map-marker-alt"></i><a
-                        href="#"> <?php echo $address; ?></a></div>
+    <div class="main-header-top__wrapper">
+        <div class="main-header-top">
+            <div class="main-header-top__wrap address">
+                <?php
+                $phone = carbon_get_theme_option('crb_phone');
+                $phoneClear = clear_phone($phone);
+                $mail = carbon_get_theme_option('crb_mail');
+                $address = carbon_get_theme_option('crb_address' . get_lang());
+                ?>
+                <div class="main-header-top__item address__item"><i class="fas fa-phone"></i><a
+                            href="tel:<?php echo $phoneClear; ?>"> <?php echo $phone; ?></a></div>
+                <div class="main-header-top__item address__item"><i class="fas fa-envelope"></i><a
+                            href="mailto:<?php echo $mail; ?>"> <?php echo $mail; ?></a></div>
+                <div class="main-header-top__item address__item"><i class="fas fa-map-marker-alt"></i><a
+                            href="#"> <?php echo $address; ?></a></div>
+            </div>
         </div>
     </div>
     <div class="main-header-bottom">
