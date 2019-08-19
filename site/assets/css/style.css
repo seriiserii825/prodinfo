@@ -4980,22 +4980,23 @@ p {
   .main-slider__content::after {
     display: none; } }
 .main-slider__content h2 {
-  margin-bottom: 20px;
-  font-size: 40px;
+  margin-top: -20px;
+  margin-bottom: 0;
+  font-size: 50px;
   text-transform: uppercase; }
 
 @media screen and (max-width: 630px) {
   .main-slider__content h2 {
     font-size: 20px; } }
 .main-slider__content h4 {
-  font-size: 20px;
+  font-size: 26px;
   color: #13d68f; }
 
 @media screen and (max-width: 630px) {
   .main-slider__content h4 {
     font-size: 16px; } }
 .main-slider__content p {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: bold; }
 
 @media screen and (max-width: 630px) {
@@ -5017,10 +5018,10 @@ p {
   fill: white; }
 
 .main-slider-arrows .slider-arrow--left {
-  left: 20px; }
+  left: 100px; }
 
 .main-slider-arrows .slider-arrow--right {
-  right: 20px; }
+  right: 100px; }
 
 .offers__content {
   display: -ms-grid;
