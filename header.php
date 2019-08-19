@@ -30,6 +30,8 @@
                 <a class="logo" href="<?php echo home_url(); ?>">
 					<?php
 					$logo_png = carbon_get_theme_option('crb_logo_png');
+//					vardump($logo_png);
+
 					?>
 					<?php if (!empty($logo_png)): ?>
                         <img src="<?php echo $logo_png; ?>" alt="">
