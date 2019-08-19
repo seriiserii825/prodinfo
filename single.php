@@ -28,14 +28,14 @@ $category = wp_get_post_categories(get_the_ID());
                 <div class="news__item-text">
 					<?php the_content(); ?>
                 </div>
-            <?php
+				<?php
 
 				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
+				if (comments_open() || get_comments_number()) :
 					comments_template();
 				endif;
 
-                ?>
+				?>
 
 
 			<?php else: ?>
@@ -66,12 +66,9 @@ $category = wp_get_post_categories(get_the_ID());
 						?></button>
                 </div>
             </div>
-            <footer class="news__item-footer"><span
-                        class="news__show">13 <?php echo esc_html__('Write a comment', 'bs-prodinfo')
-					?></span>
-                <a class="news__comment-link" href="#">
-					<?php echo esc_html__('Write a comment', 'bs-prodinfo'); ?>
-                </a>
+            <footer class="news__item-footer">
+                <span class="news__show"><?php do_action( 'pageviews' ); ?> <?php echo esc_html__( 'afisare', 'bs-prodinfo' )
+                 ?></span>
                 <span class="news__like">
                     <?php echo do_shortcode('[wp_ulike]'); ?>
                 </span>
@@ -97,9 +94,9 @@ $category = wp_get_post_categories(get_the_ID());
                     <div class="last-posts__item">
 						<?php the_post_thumbnail('full'); ?>
                         <div class="last-posts__text">
-                            <h3><?php the_title(); ?></h3>
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             <footer class="news__item-footer">
-                                <span class="news__show"><i class="fas fa-eye"></i> 13</span>
+                                <span class="news__show"><i class="fas fa-eye"></i> <?php do_action( 'pageviews' ); ?></span>
                                 <a class="news__comment-link"
                                    href="#"><?php echo esc_html__('Write a comment', 'bs-prodinfo')
 									?></a>
@@ -116,11 +113,11 @@ $category = wp_get_post_categories(get_the_ID());
 
         </div>
     </section>
-    <div class="register">
-        <p><a href="#"><?php echo esc_html__('Connect', 'bs-prodinfo')
-				?> </a> <?php echo esc_html__('To show a comment', 'bs-prodinfo')
-			?></p>
-    </div>
+<!--    <div class="register">-->
+<!--        <p><a href="#">--><?php //echo esc_html__('Connect', 'bs-prodinfo')
+//				?><!-- </a> --><?php //echo esc_html__('To show a comment', 'bs-prodinfo')
+//			?><!--</p>-->
+<!--    </div>-->
 
 <?php
 get_footer();

@@ -71,6 +71,11 @@ function wp_ulike_new_format_number($value, $num, $plus){
 	return $value;
 }
 
+//page views
+add_action( 'after_setup_theme', function() {
+	add_theme_support( 'pageviews' );
+});
+
 //function webp_upload_mimes( $existing_mimes ) {
 //	// add webp to the list of mime types
 //	$existing_mimes['webp'] = 'image/webp';
