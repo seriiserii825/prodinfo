@@ -8,20 +8,22 @@
 <body>
 
 <header class="main-header">
-    <div class="main-header-top">
-        <div class="main-header-top__wrap address">
-			<?php
-			$phone = carbon_get_theme_option('crb_phone');
-			$phoneClear = clear_phone($phone);
-			$mail = carbon_get_theme_option('crb_mail');
-			$address = carbon_get_theme_option('crb_address' . get_lang());
-			?>
-            <div class="main-header-top__item address__item"><i class="fas fa-phone"></i><a
-                        href="tel:<?php echo $phoneClear; ?>"> <?php echo $phone; ?></a></div>
-            <div class="main-header-top__item address__item"><i class="fas fa-envelope"></i><a
-                        href="mailto:<?php echo $mail; ?>"> <?php echo $mail; ?></a></div>
-            <div class="main-header-top__item address__item"><i class="fas fa-map-marker-alt"></i><a
-                        href="#"> <?php echo $address; ?></a></div>
+    <div class="main-header-top__wrapper">
+        <div class="main-header-top">
+            <div class="main-header-top__wrap address">
+				<?php
+				$phone = carbon_get_theme_option('crb_phone');
+				$phoneClear = clear_phone($phone);
+				$mail = carbon_get_theme_option('crb_mail');
+				$address = carbon_get_theme_option('crb_address' . get_lang());
+				?>
+                <div class="main-header-top__item address__item"><i class="fas fa-phone"></i><a
+                            href="tel:<?php echo $phoneClear; ?>"> <?php echo $phone; ?></a></div>
+                <div class="main-header-top__item address__item"><i class="fas fa-envelope"></i><a
+                            href="mailto:<?php echo $mail; ?>"> <?php echo $mail; ?></a></div>
+                <div class="main-header-top__item address__item"><i class="fas fa-map-marker-alt"></i><a
+                            href="#"> <?php echo $address; ?></a></div>
+            </div>
         </div>
     </div>
     <div class="main-header-bottom">
@@ -30,7 +32,7 @@
                 <a class="logo" href="<?php echo home_url(); ?>">
 					<?php
 					$logo_png = carbon_get_theme_option('crb_logo_png');
-//					vardump($logo_png);
+					//					vardump($logo_png);
 
 					?>
 					<?php if (!empty($logo_png)): ?>
@@ -66,9 +68,9 @@
                     <div class="sandwitch__line sandwitch__line--bottom"></div>
                 </div>
 
-                <?php if(!dynamic_sidebar('language')): ?>
+				<?php if (!dynamic_sidebar('language')): ?>
                     <h4 style="color: red;">Место для виджета языков</h4>
-                <?php endif; ?>
+				<?php endif; ?>
             </div>
         </div>
     </div>

@@ -6195,6 +6195,11 @@ p {
   background-color: black;
 }
 
+.main-header-top__wrapper {
+  padding-top: 2px;
+  padding-bottom: 6px;
+}
+
 .main-header-top {
   padding: 10px 0;
   font-size: 15px;
