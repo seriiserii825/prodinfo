@@ -46,7 +46,7 @@ $intro_bg = carbon_get_term_meta($category->term_id, 'crb_intro_bg');
                     <footer class="news__item-footer">
                         <span class="news__show"><?php do_action('pageviews'); ?> <?php echo esc_html__('afisare', 'bs-prodinfo')
 	                        ?></span>
-                        <a class="news__comment-link" href="#">Scrie un commentariu</a>
+                        <a class="news__comment-link" href="<?php the_permalink(); ?>"><?php echo esc_html__( 'Write a comment', 'bs-prodinfo' ) ?></a>
                         <span class="news__like">
                             <?php echo do_shortcode('[wp_ulike]'); ?>
                         </span>
