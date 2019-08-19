@@ -52,8 +52,22 @@ get_header(); ?>
     <div class="container">
         <div class="offers__content">
 			<?php $offers = carbon_get_theme_option('crb_offers'); ?>
-			<?php foreach ($offers as $offer): ?>
-                <div class="offers__item">
+            <?php $offers_count = count($offers); ?>
+
+			<?php $i = 1; foreach ($offers as $offer): ?>
+                <?php
+                    $offers_class = '';
+
+                    if($i % 2 == 0){
+                        $offers_class = 'arrow-down';
+                    } elseif($i == $offers_count) {
+                        $offers_class = '';
+                    } else {
+	                    $offers_class = 'arrow-up';
+
+                    }
+				?>
+                <div class="offers__item <?php echo $offers_class; ?>">
                     <img src="<?php echo kama_thumb_src('w=100 &h=100', $offer['crb_offers_photo']); ?>" alt="">
 
                     <div class="offers__text">
@@ -61,7 +75,7 @@ get_header(); ?>
                         <p><?php echo $offer['crb_offers_item_text' . get_lang()]; ?></p>
                     </div>
                 </div>
-			<?php endforeach; ?>
+			<?php $i++; endforeach; ?>
         </div>
     </div>
 </section>
