@@ -4712,8 +4712,6 @@ p {
 .main-header-top__wrapper {
   padding-top: 2px;
   padding-bottom: 6px;
-  outline: 1px solid green;
-
 }
 .main-header-top {
   padding: 10px 0;
@@ -4918,11 +4916,13 @@ p {
 .main-slider__wrap {
   position: relative;
   margin: 0 auto;
-  max-width: 1350px; }
+  max-width: 1920px; }
 
 .main-slider__item {
   position: relative;
-  height: 600px; }
+  height: 600px;
+  background-size: cover;
+}
 @media screen and (max-width: 630px) {
   .main-slider__item {
     height: 225px; } }
@@ -5829,3 +5829,5 @@ p {
   transition: all .4s; }
 .register a:hover {
   color: #13d68f; }
+
+
