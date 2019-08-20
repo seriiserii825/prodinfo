@@ -137,7 +137,8 @@ get_header(); ?>
 </div>
 <div class="partners">
     <div class="container">
-        <h2><?php echo carbon_get_theme_option('crb_partners_title'); ?></h2>
+        <?php $partners_title = carbon_get_theme_option('crb_partners_title'.get_lang()); ?>
+        <h2><?php echo $partners_title; ?></h2>
         <div class="partners-slider-wrap">
             <div class="slider-arrow slider-arrow--left"><img
                         src="<?php echo get_template_directory_uri(); ?>/site/assets/i/svg/left-arrow.svg"></div>
