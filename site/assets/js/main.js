@@ -123,6 +123,29 @@ $(function () {
 		});
 	};
 	showAddressString();
+
+	let scrollToTop = function () {
+		let jsUp = $('#js-up');
+		$(document).on('scroll', function () {
+			if ($(window).width() < 768) {
+				if($(document).scrollTop() > 800){
+					jsUp.fadeIn();
+				}else if($(document).scrollTop() < 800){
+					jsUp.fadeOut();
+				}
+			}
+		});
+
+		$('#js-up').on('click', function (e) {
+			e.preventDefault();
+
+
+			$('html, body').animate({
+				scrollTop: 0
+			}, 1500);
+		});
+	};
+	scrollToTop();
 });
 
 
