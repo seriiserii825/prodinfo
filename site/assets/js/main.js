@@ -80,7 +80,14 @@ $(function () {
 			if (href === 'http://prodinfo.myihor.ru/#js-offers' || href === 'http://prodinfo.myihor.ru/en/#js-offers' || href === 'http://prodinfo.myihor.ru/ru/#js-offers') {
 				let browserHref = $(location)[0].href;
 
-				if (browserHref === 'http://prodinfo.myihor.ru/' || browserHref === 'http://prodinfo.myihor.ru/en/' || browserHref === 'http://prodinfo.myihor.ru/ru/') {
+				if (
+					browserHref === 'http://prodinfo.myihor.ru/' ||
+					browserHref === 'http://prodinfo.myihor.ru/en/' ||
+					browserHref === 'http://prodinfo.myihor.ru/ru/' ||
+					browserHref === 'http://prodinfo.myihor.ru/#js-offers' ||
+					browserHref === 'http://prodinfo.myihor.ru/en/#js-offers' ||
+					browserHref === 'http://prodinfo.myihor.ru/ru/#js-offers'
+					) {
 					e.preventDefault();
 
 					let about = $('.offers');
@@ -90,8 +97,6 @@ $(function () {
 						scrollTop: aboutOffsetTop
 					}, 1000);
 				}
-
-
 			}
 		});
 
@@ -152,6 +157,7 @@ $(function () {
 	};
 	scrollToTop();
 });
+//islands#grayStretchyIcon
 
 
 
