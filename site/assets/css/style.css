@@ -7049,6 +7049,7 @@ p {
 	padding: 30px;
 	background-size: cover;
 	z-index: 1;
+	filter: contrast(90%) brightness(80%);
 }
 
 .footer::before {
@@ -7506,7 +7507,7 @@ p {
 	-webkit-box-direction: normal;
 	-ms-flex-direction: column;
 	flex-direction: column;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 	height: 100px;
 }
 
