@@ -73,36 +73,6 @@ $(function () {
 	};
 	partnersSlider();
 
-	let scrollToAbout = function () {
-
-		$('#js-main-menu li a').on('click', function (e) {
-			let href = $(this).attr('href');
-			if (href === 'http://prodinfo.myihor.ru/#js-offers' || href === 'http://prodinfo.myihor.ru/en/#js-offers' || href === 'http://prodinfo.myihor.ru/ru/#js-offers') {
-				let browserHref = $(location)[0].href;
-
-				if (
-					browserHref === 'http://prodinfo.myihor.ru/' ||
-					browserHref === 'http://prodinfo.myihor.ru/en/' ||
-					browserHref === 'http://prodinfo.myihor.ru/ru/' ||
-					browserHref === 'http://prodinfo.myihor.ru/#js-offers' ||
-					browserHref === 'http://prodinfo.myihor.ru/en/#js-offers' ||
-					browserHref === 'http://prodinfo.myihor.ru/ru/#js-offers'
-					) {
-					e.preventDefault();
-
-					let about = $('.offers');
-					let aboutOffsetTop = about.offset().top;
-
-					$('html, body').animate({
-						scrollTop: aboutOffsetTop
-					}, 1000);
-				}
-			}
-		});
-
-	};
-	scrollToAbout();
-
 	let showLikes = function () {
 		let newsLike = $('.news__like svg');
 
