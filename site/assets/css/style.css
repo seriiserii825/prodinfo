@@ -7987,6 +7987,7 @@ p {
 }
 .map {
 	height: 600px;
+	filter: grayscale(100%) invert(16%);
 }
 .up {
 	position: fixed;

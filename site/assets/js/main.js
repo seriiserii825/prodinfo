@@ -74,21 +74,26 @@ $(function () {
 	partnersSlider();
 
 	let scrollToAbout = function () {
-		let about = $('.offers');
 
-		if (about.length > 0) {
-			let aboutOffsetTop = about.offset().top;
+		$('#js-main-menu li a').on('click', function (e) {
+			let href = $(this).attr('href');
+			if (href === 'http://prodinfo.myihor.ru/#js-offers' || href === 'http://prodinfo.myihor.ru/en/#js-offers' || href === 'http://prodinfo.myihor.ru/ru/#js-offers') {
+				let browserHref = $(location)[0].href;
 
-			$('#js-main-menu li a').on('click', function (e) {
-				let href = $(this).attr('href');
-				if (href === 'http://prodinfo.myihor.ru/#js-offers' || href === 'http://prodinfo.myihor.ru/en/#js-offers' || href === 'http://prodinfo.myihor.ru/ru/#js-offers') {
+				if (browserHref === 'http://prodinfo.myihor.ru/' || browserHref === 'http://prodinfo.myihor.ru/en/' || browserHref === 'http://prodinfo.myihor.ru/ru/') {
 					e.preventDefault();
+
+					let about = $('.offers');
+					let aboutOffsetTop = about.offset().top;
+
 					$('html, body').animate({
 						scrollTop: aboutOffsetTop
 					}, 1000);
 				}
-			});
-		}
+
+
+			}
+		});
 
 	};
 	scrollToAbout();
@@ -128,9 +133,9 @@ $(function () {
 		let jsUp = $('#js-up');
 		$(document).on('scroll', function () {
 			if ($(window).width() < 768) {
-				if($(document).scrollTop() > 800){
+				if ($(document).scrollTop() > 800) {
 					jsUp.fadeIn();
-				}else if($(document).scrollTop() < 800){
+				} else if ($(document).scrollTop() < 800) {
 					jsUp.fadeOut();
 				}
 			}
