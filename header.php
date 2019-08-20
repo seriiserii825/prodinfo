@@ -7,6 +7,14 @@
 </head>
 <body>
 
+<?php
+//$enabledLanguages = WPGlobus::Config()->enabled_languages;
+//$currentLanguage = WPGlobus::Config()->language;
+//                    the_widget('WPGlobusWidget');
+
+//vardump(WPGlobus::Config());
+//                    vardump($currentLanguage);
+?>
 <header class="main-header">
     <div class="main-header-top__wrapper">
         <div class="main-header-top">
@@ -68,9 +76,11 @@
                     <div class="sandwitch__line sandwitch__line--bottom"></div>
                 </div>
 
-				<?php if (!dynamic_sidebar('language')): ?>
-                    <h4 style="color: red;">Место для виджета языков</h4>
-				<?php endif; ?>
+                <div class="wpglobus-lang">
+	                <?php if (!dynamic_sidebar('language')): ?>
+                        <h4 style="color: red;">Место для виджета языков</h4>
+	                <?php endif; ?>
+                </div>
             </div>
         </div>
     </div>
