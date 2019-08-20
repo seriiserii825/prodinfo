@@ -40,6 +40,13 @@
         </div>
     </div>
 </footer>
+<div class="footer-buttons">
+    <a class="footer-buttons__phone" href="tel:<?php echo $phoneClear; ?>"><i class="fas fa-phone"></i></a>
+    <a class="footer-buttons__facebook" href="<?php echo carbon_get_theme_option('crb_facebook'); ?>"><i class="fab fa-facebook-square"></i></a>
+</div>
+<a href="https://www.messenger.com/t/prodinfo.md" class="messenger">
+    <img src="<?php echo get_template_directory_uri().'/site/assets/i/MESSENGER.png'; ?>" alt="">
+</a>
 <!--[if lt IE 9]>
 <script src="assets/libs/html5shiv/es5-shim.min.js"></script>
 <script src="assets/libs/html5shiv/html5shiv.min.js"></script>
