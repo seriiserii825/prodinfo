@@ -7576,7 +7576,7 @@ p {
 }
 
 .news__block {
-	padding: 40px 50px;
+	padding: 30px 50px;
 	border: 1px solid #ccc;
 }
 
@@ -7641,10 +7641,11 @@ p {
 .news__item-text h1,
 .news__item-text h2 {
 	margin-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
 	font-size: 26px;
 	font-weight: normal;
 	height: 86px;
-	line-height: 1.1;
+	line-height: 1.2;
 	color: #2F3055;
 	overflow: hidden;
 }
@@ -7683,7 +7684,7 @@ p {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	padding-top: 30px;
+	height: 44px;
 	font-size: 12px;
 	border-top: 1px solid #ccc;
 }
@@ -7722,7 +7723,12 @@ p {
 }
 
 .news__like svg {
+	width: 30px;
 	cursor: pointer;
+}
+
+.news__like svg path {
+	fill: transparent;
 }
 
 .news__like svg.active {
