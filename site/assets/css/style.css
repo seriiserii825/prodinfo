@@ -7986,8 +7986,8 @@ p {
 	color: #00aa00;
 }
 .map {
-	height: 600px;
-	filter: grayscale(100%) invert(16%);
+	height: 380px;
+	filter: grayscale(100%) invert(86%);
 }
 .up {
 	position: fixed;
