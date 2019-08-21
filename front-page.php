@@ -38,7 +38,7 @@ get_header(); ?>
 		<?php foreach ($slider_images_id as $slide_id): ?>
 			<?php $id = $slide_id['crb_slider_photo']; ?>
             <div class="main-slider__item"
-                 style="background-image: url('<?php echo kama_thumb_src('w=1350 &h=600', $id); ?>')"></div>
+                 style="background-image: url('<?php echo kama_thumb_src('w=1350 &h=645', $id); ?>')"></div>
 		<?php endforeach; ?>
     </div>
 </div>
@@ -104,12 +104,15 @@ get_header(); ?>
         <h2 class="section__title"><?php echo carbon_get_theme_option('crb_directions_title' . get_lang()); ?></h2>
         <h4 class="section__subtitle"><?php echo carbon_get_theme_option('crb_site_title'); ?></h4>
     </header>
-    <div class="container">
+    <div class="directions__container">
         <div class="directions__content">
 			<?php $directions = carbon_get_theme_option('crb_directions'); ?>
 			<?php foreach ($directions as $direction): ?>
-                <div class="directions__item"
-                     style="background-image: url('<?php echo kama_thumb_src('w=241 &h=262', $direction['crb_directions_bg']) ?>')">
+                <div class="directions__item" >
+                    <div class="direction__img">
+	                    <?php echo kama_thumb_img('w=241 &h=262', $direction['crb_directions_bg']) ?>
+                    </div>
+
                     <div class="directions__center">
                         <h4><?php echo $direction['crb_directions_item_title' . get_lang()]; ?></h4>
                         <img src="<?php echo kama_thumb_src('w=92 &h=92', $direction['crb_directions_photo']) ?>"
