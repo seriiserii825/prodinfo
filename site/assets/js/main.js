@@ -32,7 +32,7 @@ $(function () {
 	let ideaSlider = function () {
 		$('#js-idea-slider').slick({
 			arrows: false,
-			autoplay: true
+			// autoplay: true
 		});
 	};
 	ideaSlider();

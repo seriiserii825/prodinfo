@@ -6938,8 +6938,15 @@ p {
 .idea-slider__item {
 	position: relative;
 	min-height: 255px;
-	background-size: cover;
-	filter: contrast(60%) brightness(50%);
+}
+
+.idea-slider__item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	filter: contrast(50%) brightness(50%);
 }
 
 .idea__content {
