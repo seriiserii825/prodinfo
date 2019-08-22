@@ -6949,6 +6949,7 @@ p {
 }
 
 .directions.section {
+	padding-top: 64px;
 	padding-bottom: 40px;
 }
 .directions__container {
@@ -6958,17 +6959,37 @@ p {
 }
 
 .directions__content {
+	position: relative;
+	top: -2px;
+	left: -2px;
 	display: -ms-grid;
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-gap: 5px;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 }
 
 .directions .section__title {
+	margin-bottom: 36px;
 	max-width: 400px;
+	line-height: 41px;
+}
+.directions .section__title::before,
+.directions .section__title::after {
+	top: 25%;
 }
 
+.directions .section__title::before{
+	left: -87px;
+}
+
+.directions .section__title::after{
+	right: -87px;
+}
+
+.directions .section__subtitle {
+	margin-bottom: 40px;
+}
 @media screen and (max-width: 940px) {
 	.directions__content {
 		grid-template-columns: repeat(3, 1fr);
@@ -7030,9 +7051,13 @@ p {
 }
 
 .directions__center h4 {
-	margin-bottom: 20px;
+	margin-bottom: 12px;
+	margin-left: -14px;
 }
-
+.directions .btn {
+	padding-left: 24px;
+	padding-right: 32px;
+}
 .idea {
 	position: relative;
 	margin: 0 auto;
