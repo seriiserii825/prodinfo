@@ -7250,8 +7250,15 @@ p {
 
 .footer {
 	position: relative;
-	padding: 30px;
+	padding: 22px;
 	z-index: 1;
+}
+
+.footer .container {
+	position: relative;
+	max-width: 956px;
+	color: white;
+	z-index: 3;
 }
 .footer__img-bg {
 	position: absolute;
@@ -7278,17 +7285,10 @@ p {
 	height: 100%;
 	background: #6cc6ff6b;
 }
-.footer .container {
-	position: relative;
-	/*padding: 0 15px;*/
-	max-width: 950px;
-	color: white;
-	z-index: 3;
-}
 
 .footer h2 {
 	position: relative;
-	padding-bottom: 15px;
+	padding-bottom: 11px;
 	margin-bottom: 20px;
 	font-family: 'Roboto Light', sans-serif;
 	font-size: 20px;
@@ -7301,7 +7301,7 @@ p {
 	position: absolute;
 	left: 0;
 	bottom: 0;
-	width: 40px;
+	width: 35px;
 	height: 4px;
 	background: white;
 }
@@ -7331,13 +7331,16 @@ p {
 	display: grid;
 	grid-template-columns: 1fr 472px;
 	grid-gap: 30px;
-	margin-bottom: 0;
+	margin-bottom: 16px;
 }
 
 @media screen and (max-width: 890px) {
 	.footer-top {
 		display: block;
 	}
+}
+.footer .fa-phone {
+	transform: scaleX(-1);
 }
 
 .footer-contacts {
@@ -7357,7 +7360,8 @@ p {
 	-webkit-box-align: center;
 	-ms-flex-align: center;
 	align-items: center;
-	margin-bottom: 14px;
+	margin-bottom: 11px;
+	padding-left: 4px;
 }
 
 .footer-list li:last-child {
@@ -7371,6 +7375,11 @@ p {
 
 .footer-list img {
 	width: 18px;
+}
+.footer-form {
+	position: relative;
+	top: 10px;
+	right: 16px;
 }
 
 @media screen and (max-width: 890px) {
@@ -7403,7 +7412,7 @@ p {
 	display: block;
 	width: 100%;
 	padding: 0 10px;
-	height: 30px;
+	height: 33px;
 	line-height: 30;
 	background: none;
 	color: white;
@@ -7414,6 +7423,7 @@ p {
 
 .footer-form textarea,
 .footer-form input {
+	font-size: 14px;
 	border-radius: 0;
 }
 
@@ -7449,7 +7459,7 @@ p {
 	display: block;
 	margin-bottom: 20px;
 	width: 100%;
-	height: 60px;
+	height: 53px;
 	padding: 10px;
 	background: none;
 	color: white;
@@ -7459,8 +7469,8 @@ p {
 .footer-form input[type="submit"] {
 	display: table;
 	margin-left: auto;
-	margin-right: 30px;
-	padding: 10px 30px;
+	margin-right: 16px;
+	padding: 7px 30px;
 	width: auto;
 	color: white;
 	font-size: 14px;

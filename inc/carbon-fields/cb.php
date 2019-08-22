@@ -221,6 +221,13 @@ function crb_attach_theme_options()
 		->add_tab(__('Footer'), array(
 			Field::make('image', 'crb_footer_photo', __('Photo footer'))
 				->set_help_text('1280x520'),
+
+			Field::make('text', 'crb_contacts_title_ro', __('Block contacts title ro', 'bs-prodinfo1'))
+				->set_width(30),
+			Field::make('text', 'crb_contacts_title_ru', __('Block contacts title ru', 'bs-prodinfo1'))
+				->set_width(30),
+			Field::make('text', 'crb_contacts_title_en', __('Block contacts title en', 'bs-prodinfo1'))
+				->set_width(30),
 		));
 }
 

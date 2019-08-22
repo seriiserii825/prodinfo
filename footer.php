@@ -5,8 +5,7 @@
     <div class="container">
         <div class="footer-top">
             <div class="footer-contacts">
-                <h2><?php echo esc_html__( 'Contacts', 'bs-prodinfo' )
-                 ?></h2>
+                <h2><?php echo carbon_get_theme_option('crb_contacts_title'.get_lang()); ?></h2>
 
 				<?php
 				$phone = carbon_get_theme_option('crb_phone');
@@ -15,12 +14,11 @@
 				$address = carbon_get_theme_option('crb_address' . get_lang());
 				?>
                 <ul class="footer-list address">
-                    <li class="address__item"><i class="fas fa-phone"></i><a
-                                href="tel:<?php echo $phoneClear; ?>"> <?php echo $phone; ?></a></li>
-                    <li class="address__item"><i class="fas fa-envelope"></i><a
-                                href="mailto:<?php echo $mail; ?>"><?php echo $mail; ?></a></li>
-                    <li class="address__item"><i class="fas fa-map-marker-alt"></i><a
-                                href="#"><?php echo $address; ?></a></li>
+                    <li class="address__item"><i class="fas fa-phone"></i>
+                        <a href="tel:<?php echo $phoneClear; ?>"><?php echo esc_html__( 'Phone', 'bs-prodinfo' ) ?>: <?php echo $phone; ?></a>
+                    </li>
+                    <li class="address__item"><i class="fas fa-envelope"></i><a href="mailto:<?php echo $mail; ?>">Email: <?php echo $mail; ?></a></li>
+                    <li class="address__item"><i class="fas fa-map-marker-alt"></i><a href="#"><?php echo $address; ?></a></li>
                 </ul>
             </div>
             <div class="footer-form">
