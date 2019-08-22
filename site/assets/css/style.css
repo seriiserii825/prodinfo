@@ -7060,6 +7060,7 @@ p {
 }
 .idea {
 	position: relative;
+	top: -2px;
 	margin: 0 auto;
 	max-width: 1920px;
 }
@@ -7071,7 +7072,7 @@ p {
 
 .idea-slider__item {
 	position: relative;
-	min-height: 255px;
+	min-height: 248px;
 }
 
 .idea-slider__item img {
@@ -7085,7 +7086,7 @@ p {
 
 .idea__content {
 	position: absolute;
-	top: 50%;
+	top: 49%;
 	left: 50%;
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
@@ -7098,8 +7099,8 @@ p {
 
 .idea__content h2 {
 	position: relative;
-	padding-bottom: 15px;
-	margin: 0 auto 15px;
+	padding-bottom: 8px;
+	margin: 0 auto 4px;
 	font-size: 34px;
 	text-transform: uppercase;
 }
@@ -7112,7 +7113,7 @@ p {
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
 	bottom: 0;
-	width: 640px;
+	width: 620px;
 	height: 4px;
 	background: white;
 }
@@ -7131,7 +7132,7 @@ p {
 }
 
 .idea__content p {
-	margin: 0 auto 30px;
+	margin: 0 auto 26px;
 	max-width: 500px;
 	font-size: 18px;
 }
@@ -7140,6 +7141,13 @@ p {
 	.idea__content p {
 		font-size: 14px;
 	}
+}
+.idea .btn {
+	position: relative;
+	padding-top: 7px;
+	top: 2px;
+	left: 5px;
+	padding-bottom: 7px;
 }
 
 .partners {
