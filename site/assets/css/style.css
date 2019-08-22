@@ -6064,7 +6064,8 @@ p {
 	display: table;
 	margin: 0 auto;
 	padding: 10px 20px;
-	font-size: 16px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 17px;
 	font-weight: bold;
 	text-decoration: none;
 	color: white;
@@ -6860,8 +6861,16 @@ p {
 
 .member {
 	position: relative;
+	padding-top: 31px;
 	background-size: cover;
 	background-position: center;
+}
+.member .section__title {
+	margin-bottom: 28px;
+	font-size: 34px;
+}
+.member .section__subtitle {
+	margin-bottom: 32px;
 }
 
 .member.section {
@@ -6882,9 +6891,9 @@ p {
 	position: relative;
 	display: -ms-grid;
 	display: grid;
-	margin-bottom: 70px;
+	margin-bottom: 45px;
 	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 10px;
+	grid-gap: 8px;
 	z-index: 3;
 }
 
@@ -6916,9 +6925,9 @@ p {
 
 .member__item img {
 	position: relative;
-	top: 36px;
+	top: 43px;
 	display: table;
-	margin: 0 auto 20px;
+	margin: 0 auto 27px;
 }
 
 .member__text {
@@ -6926,10 +6935,17 @@ p {
 	margin: 0 auto;
 	padding: 20px;
 	padding-bottom: 12px;
-	width: 290px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	line-height: 30px;
+	width: 280px;
 	font-weight: bold;
 	text-align: center;
 	color: #2F3055;
+}
+.member .btn.arrow {
+	 padding-left: 47px;
+	 padding-right: 55px;
 }
 
 .directions.section {
