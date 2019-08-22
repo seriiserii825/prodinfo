@@ -5,7 +5,7 @@
     <meta charset="utf-8">
 	<?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 
 <?php
 //$enabledLanguages = WPGlobus::Config()->enabled_languages;
