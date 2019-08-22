@@ -6486,11 +6486,11 @@ p {
 .section__title::before, .section__title::after {
 	content: '';
 	position: absolute;
-	top: 50%;
+	top: 56%;
 	-webkit-transform: translateY(-50%);
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	width: 60px;
+	width: 63px;
 	height: 3px;
 	background: #2F3055;
 }
@@ -6502,11 +6502,11 @@ p {
 }
 
 .section__title::before {
-	left: -100px;
+	left: -109px;
 }
 
 .section__title::after {
-	right: -100px;
+	right: -109px;
 }
 
 .section__subtitle {
@@ -7517,6 +7517,9 @@ p {
 
 .page-intro .section__title {
 	position: relative;
+	top: -4px;
+	left: -1px;
+	letter-spacing: 2.6px;
 	margin-bottom: 0;
 	font-family: 'Raleway-Bold', sans-serif;
 	z-index: 3;
@@ -7527,7 +7530,8 @@ p {
 }
 
 .advantage__description {
-	padding: 34px 0;
+	padding: 27px 0;
+	padding-left: 20px;
 	margin: 0 auto;
 	max-width: 604px;
 	text-align: center;
@@ -7535,17 +7539,52 @@ p {
 }
 
 .advantage-content .section__title {
+	position: relative;
+	left: 30px;
+	margin-bottom: 40px;
 	font-family: 'Raleway-Bold', sans-serif;
 	font-size: 27px;
 	font-weight: 700;
 }
 
+.advantage-content .section__title:before {
+	left: -88px;
+}
+.advantage-content .section__title:after {
+	right: -88px;
+}
+
 .advantage__item {
-	padding: 20px 0 40px;
+	padding: 13px 0 40px;
+}
+
+.advantage__item:nth-child(2) {
+	padding: 17px 0 40px;
+}
+
+.advantage__item:nth-child(3) {
+	padding: 15px 0 40px;
+}
+
+.advantage__item:last-child {
+	padding: 48px 0 40px;
+}
+
+.advantage__item:last-child .section__title {
+	margin-bottom: 31px;
 }
 
 .advantage__item.dark {
 	background: #F7F7F7;
+}
+
+
+.advantage__item.dark .advantage__img {
+	text-align: left;
+}
+
+.advantage__item.reverse .advantage__img {
+	text-align: right;
 }
 
 .advantage__item.reverse .advantage__block {
@@ -7575,7 +7614,7 @@ p {
 	grid-gap: 30px;
 	margin: 0 auto;
 	padding: 0 15px;
-	max-width: 960px;
+	max-width: 975px;
 }
 
 @media screen and (max-width: 770px) {
@@ -7621,13 +7660,13 @@ p {
 }
 
 .benefice {
-	padding: 70px 0;
+	padding: 67px 0;
 	background: #F7F7F7;
 }
 
 .benefice__content {
 	margin: 0 auto;
-	max-width: 960px;
+	max-width: 940px;
 	padding: 0 15px;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -7670,6 +7709,9 @@ p {
 }
 
 .benefice__content .btn {
+	position: relative;
+	top: 6px;
+	left: 37px;
 	-webkit-box-flex: 0;
 	-ms-flex: 0 0 354px;
 	font-family: 'Raleway-Bold', sans-serif;
