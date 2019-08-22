@@ -126,6 +126,15 @@ $(function () {
 		});
 	};
 	scrollToTop();
+
+	let changeMenuClass = function () {
+		let url = location.href;
+		if (url.indexOf('/ru/') !== -1) {
+			$('.main-menu').addClass('ru');
+			$('.main-header-bottom .logo').addClass('ru');
+		}
+	};
+	changeMenuClass();
 });
 //islands#grayStretchyIcon
 

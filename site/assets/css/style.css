@@ -6287,7 +6287,7 @@ p {
 .main-header-top__wrap .main-header-top__item:first-child  .fas{
 	position: relative;
 	top: 2px;
-	left: 2px;
+	left: 3px;
 }
 
 
@@ -6380,12 +6380,16 @@ p {
 	background: white;
 	z-index: 2;
 }
+.main-header-bottom .container {
+	max-width: 1232px;
+}
 
 .main-header-bottom__wrap {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 @media screen and (max-width: 850px) {
@@ -6399,7 +6403,11 @@ p {
 	position: static;
 	display: block;
 	margin-left: -8px;
-	/*margin-right: 40px;*/
+	/*margin-right: 92px;*/
+}
+
+.main-header-bottom .logo.ru {
+	/*margin-right: 70px;*/
 }
 
 
@@ -6535,6 +6543,7 @@ p {
 	-ms-flex-align: center;
 	align-items: center;
 	margin-top: -4px;
+	margin-left: auto;
 }
 
 @media screen and (min-width: 1100px) {
@@ -6603,6 +6612,17 @@ p {
 	-webkit-transition: all .4s ease;
 	-o-transition: all .4s ease;
 	transition: all .4s ease;
+}
+.main-menu.ru a{
+	font-weight: normal;
+}
+
+.main-menu.ru li{
+	padding: 20px;
+}
+
+.main-menu.ru li:last-child{
+	padding-right: 27px;
 }
 
 .main-menu a:hover {
@@ -8059,7 +8079,9 @@ p {
 .wpglobus-lang {
 	display: flex;
 	align-items: center;
-	margin-top: -4px;
+	margin-top: -8px;
+	margin-right: 17px;
+	margin-left: 20px;
 }
 
 .wpglobus-lang .list {
