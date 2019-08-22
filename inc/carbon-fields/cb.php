@@ -19,11 +19,11 @@ function crb_attach_theme_options()
 				->set_help_text(esc_html__('Use all simbols for me', 'bs-prodinfo1')),
 			Field::make('text', 'crb_mail', __('Email')),
 			Field::make('text', 'crb_address_ru', __('Address ru'))
-			->set_width(30),
+				->set_width(30),
 			Field::make('text', 'crb_address_ro', __('Address ro'))
-			->set_width(30),
+				->set_width(30),
 			Field::make('text', 'crb_address_en', __('Address en'))
-			->set_width(30),
+				->set_width(30),
 
 			Field::make('text', 'crb_facebook', __('Facebook')),
 			Field::make('text', 'crb_twitter', __('Twitter')),
@@ -217,6 +217,10 @@ function crb_attach_theme_options()
 				->set_width(30),
 			Field::make('text', 'crb_benefce_button_en', __('Title benefce button en'))
 				->set_width(30),
+		))
+		->add_tab(__('Footer'), array(
+			Field::make('image', 'crb_footer_photo', __('Photo footer'))
+				->set_help_text('1280x520'),
 		));
 }
 

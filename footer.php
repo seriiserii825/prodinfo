@@ -1,5 +1,7 @@
-<footer class="footer"
-        style="background-image: url('<?php echo get_template_directory_uri(); ?>/site/assets/i/footer-bg.jpg')">
+<footer class="footer">
+    <div class="footer__img-bg">
+	    <?php echo kama_thumb_img('w=1920 &h=600', carbon_get_theme_option('crb_footer_photo')); ?>
+    </div>
     <div class="container">
         <div class="footer-top">
             <div class="footer-contacts">
@@ -57,4 +59,5 @@
 <?php wp_footer(); ?>
 </body>
 </html>
+
 
