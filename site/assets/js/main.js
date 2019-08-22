@@ -16,6 +16,7 @@ $(function () {
 		let slider = $('#js-main-slider');
 		slider.slick({
 			arrows: false,
+			dots: true
 		});
 
 		$('.main-slider-arrows .slider-arrow--left').click(function () {
