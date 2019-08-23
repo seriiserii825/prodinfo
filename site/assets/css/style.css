@@ -6259,7 +6259,7 @@ p {
 
 .main-header-top .fas {
 	margin-right: 10px;
-	color: #13d68f;
+	color: #2ECB71;
 }
 
 .main-header-top .fa-envelope {
@@ -6751,7 +6751,7 @@ p {
 }
 
 .main-slider-arrows .slider-arrow svg {
-	width: 74px;
+	width: 54px;
 	fill: white;
 }
 
@@ -8257,17 +8257,18 @@ p {
 .wpglobus-selector-link:visited,
 .wpglobus-selector-link {
 	font-size: 15px;
+	font-weight: bold;
 	text-decoration: none;
 	color: #A0A5C0;
 	transition: all .4s;
 }
 
 .wpglobus-selector-link:hover {
-	color: #00aa00;
+	color: #13d68f;
 }
 
 .wpglobus-selector-link.wpglobus-current-language {
-	color: #00aa00;
+	color: #13d68f;
 }
 .map {
 	height: 380px;
